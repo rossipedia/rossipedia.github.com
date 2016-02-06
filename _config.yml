@@ -38,7 +38,7 @@ bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/Denver
-future:      true
+future:      false
 highlighter: pygments
 markdown:    redcarpet
 gems:

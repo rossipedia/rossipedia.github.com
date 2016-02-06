@@ -4,16 +4,16 @@ title: ReactJS, or 'Why Client Side Is Fun Again'
 modified:
 categories: 
   - javascript
-  - development
+  - webdev
 description: My thoughts on the UI library ReactJS
-tags: [javascript, development]
+tags: [javascript, reactjs]
 image:
   feature: react-header.png
   credit:
   creditlink:
 comments: true
 share:
-date: 2016-02-06T10:17:11-07:00
+date: 2016-02-08T10:17:11-07:00
 ---
 
 Wow. It's been almost a year since my last post! I should probably do this
