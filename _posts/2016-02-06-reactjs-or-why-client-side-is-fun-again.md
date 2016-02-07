@@ -13,7 +13,7 @@ image:
   creditlink:
 comments: true
 share:
-date: 2016-02-08T10:17:11-07:00
+date: 2016-02-07T11:30:00-07:00
 ---
 
 Wow. It's been almost a year since my last post! I should probably do this
@@ -40,6 +40,8 @@ my attempt to summarize:
 That's not so bad, is it? In this series of posts, I'm going to dive into React,
 and how to go about building UIs with it.
 
+## React isn't actually all that scary
+
 But first, let me clarify something.  Many React examples you find out there can
 be overwhelming, and assume you will be using many things that aren't actually
 _required_ to use React, such as:
@@ -59,24 +61,47 @@ what React is and how to use it, and then integrate these other pieces one at a
 time, explaining each along the way, hopefully to instill a solid foundation in
 the React ecosystem.
 
-Also, most examples are either based around the TodoList or other mundane
-applications that aren't really all that useful in the Real World, in my
-opinion. I don't want to do that. Rather, I want to build something that
-hopefully many will find applicable to the actual work they're doing. I haven't
-decided what that is yet, but I plan to settle on that in either the next post
-or the one after that.
+## Usage in real world scenarios
+
+The vast majority of developers probably aren't working on the Next Cool Thing.
+They are more than likely building LOB (line of business) apps, generally forms
+over data (I have absolutely no concrete data to back this up, but it's a view
+I've come to after professionally writing software for over 15 years).
+
+Unfortunately, most React examples are either based around the TodoList or other
+mundane applications that aren't really all that useful in the Real World&#8482;
+(unless your job is to build ToDo lists, not judging here). These are a great
+way to show off the library and showcase what it can do, but there is a shortage
+of "real-world", LOB-software examples out there. I want to contribute to fixing
+that. I haven't decided what that is yet, but I plan to settle on that in either
+the next post or the one after that.
 
 So, let's get to it then!
 
-> I'm going to make a few assumptions about the reader here, namely that you are
-> familiar with HTML, JavaScript, jQuery, and the DOM. If not, then this series
-> of posts is probably going to be quite confusing.
+<p class="notice">
+I'm going to make a few assumptions about the reader here, namely that you are
+familiar with HTML, JavaScript, jQuery, and the DOM. If not, then this series
+of posts is probably going to be quite confusing.
+</p>
 
 ## React Basics: Components
 
 In React, UIs are driven by _Components_. So, in React speak, what is a
-component? It's a self-contained piece of code that handles rendering the UI,
-and optionally responding to events.
+component? 
+
+> A Component is a self-contained unit of software that encapsulates both how
+> the structure of the UI and its behavior, optionally maintaining any internal
+> state necessary for the operation of the UI.
+
+The benefits of Components are many, including:
+
+* Reusability. UI and behavior are self-contained.
+* Managability. A component is _only_ responsible for itself and its children.
+  As a general rule they are not aware of their parents (a "top-down" hierarchy).
+* Granularity / Composability. Components can be built up from other,
+  finer-grained components.
+
+So what do they look like in practice?
 
 In it's simplest form, it's a JavaScript object with a single
 `render` method, that is passed to React's `createClass` method:
@@ -88,6 +113,13 @@ var HelloWorld = React.createClass({
   }
 });
 ```
+
+<p class="notice">
+Many examples of React components use ES2015 classes. For now, I'm going to
+focus on the ES5 usage of React, though I will introduce ES2015 in a later
+post.
+</p>
+
 The two required pieces here are `React.createClass`, and the `render()` method.
 
 `React.createClass` is used to _declare_ a component. Note this doesn't actually
@@ -136,14 +168,16 @@ form, React uses camelCased identifiers (eg: `onClick` instead of `onclick`,
 
 ## Getting a component on to a page.
 
-Okay, so now that we have declared a component, how do show it on a page? That's
+Okay, so now that we have declared a component, how to show it on a page? That's
 where `ReactDOM.render(reactElement, domElement)` comes in:
 
-> React is actually split into multiple libraries, as the core of React
-> (components, elements, etc...) is conceptually independent of where it's used.
-> When working on the web, you will need to not only include React, but the
-> ReactDOM library as well, which is how we get a component into the DOM of a
-> web page.
+<p class="notice">
+React is actually split into multiple libraries, as the core of React
+(components, elements, etc...) is conceptually independent of where it's used.
+When working on the web, you will need to not only include React, but the
+ReactDOM library as well, which is how we get a component into the DOM of a
+web page.
+</p>
 
 In action:
 
