@@ -36,11 +36,11 @@ it by adding a new Text file and naming it `Test.cshtml`, as class library
 projects don't have the right settings for adding a Razor View directly. Enter
 the following content:
 
-```html
+~~~html
 @* Generator: Template *@
 
 <p>Hello, there!</p>
-```
+~~~
 
 The `Generator: Template` directive at the top of the file tells RazorGenerator what type
 of generator to use, in this case just a basic template with no bells and
@@ -48,9 +48,9 @@ whistles (for other types, see the [home page][1]).
 
 Okay, try to build again. BOOM: 
 
-```
+~~~
 error CS0246: The type or namespace name 'RazorGenerator' could not be found
-```
+~~~
 
 This is because by default, RazorGenerator creates templates that inherit from
 `RazorGenerator.Templating.RazorTemplateBase`, which is provided by the
@@ -58,16 +58,16 @@ This is because by default, RazorGenerator creates templates that inherit from
 control over my templates, so we'll just skip over that part, and tell our template
 to inherit from a custom base class:
 
-```html
+~~~html
 @* Generator: Template *@
 @inherits RazorLibrary.MyTemplate
 
 <p>Hello, there!</p>
-```
+~~~
 
 And `MyTemplate.cs` looks like this:
 
-```csharp
+~~~csharp
 using System.IO;
 
 public abstract class MyTemplate
@@ -97,7 +97,7 @@ public abstract class MyTemplate
     return _writer.ToString();
   }
 }
-```
+~~~
 
 What's going on
 ---------------
@@ -120,13 +120,13 @@ A couple of things to note:
 As it stands, right now we have a functional template. We can create an
 instance of it, execute it, and get the output:
 
-```csharp
+~~~csharp
 // The class name is the name of the .cshtml file
 // in this case, it's Test.cshtml
 var template = new Test();
 template.Execute();
 Console.WriteLine(template.ToString());
-```
+~~~
 
 Neat!
 
@@ -148,7 +148,7 @@ comfortable._
 
 Our base template class now looks like this:
 
-```csharp
+~~~csharp
 public abstract class Template<TData>
 {
   private readonly StringWriter _writer = new StringWriter();
@@ -179,36 +179,36 @@ public abstract class Template<TData>
     return _writer.ToString();
   }
 }
-```
+~~~
 
 Then, let's define the data we want to render:
 
-```csharp
+~~~csharp
 public class Person
 {
   public string Name { get; set; }
   public int Age { get; set; }
 }
-```
+~~~
 
 Finally, let's rename `Test.cshtml` to `PersonTemplate.cshtml`, and update
 it:
 
-```html
+~~~html
 @* Generator: Template *@
 @inherits RazorLibrary.Template<RazorLibrary.Person>
 
 <p>Hi!</p>
 
 <p>The person named @Model.Name is @Model.Age years old.</p>
-```
+~~~
 
 And that's about it! You now have a library project that exposes templates,
 without any dependency on `System.Web`.
 
 For example:
 
-```csharp
+~~~csharp
 using RazorLibrary;
 
 var person = new Person { 
@@ -221,7 +221,7 @@ var template = new PersonTemplate {
 };
 template.Execute();
 Console.WriteLine(template.ToString());
-```
+~~~
 
 Hope you find this useful. Happy coding!
 

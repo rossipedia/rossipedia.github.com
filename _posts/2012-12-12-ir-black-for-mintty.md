@@ -16,7 +16,7 @@ whipped up the following:
 
 <!-- more -->
 
-```bash
+~~~bash
 Black             = 78,78,78
 Blue              = 150,203,254
 Cyan              = 198,197,254
@@ -33,6 +33,6 @@ BoldMagenta       = 255,156,254
 BoldRed           = 255,182,176
 BoldWhite         = 255,255,255
 BoldYellow        = 255,255,203
-```
+~~~
 
 Just add this to your `~/.minttyrc` file, and you're good to go.

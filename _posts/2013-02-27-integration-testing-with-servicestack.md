@@ -39,7 +39,7 @@ elevated privileges.
 
 First, set up the AppHosts:
 
-```csharp
+~~~csharp
 // The ASP.NET/IIS app host
 public class WebAppHost : AppHostBase
 {
@@ -85,7 +85,7 @@ public class SelfAppHost : AppHostHttpListenerBase
     this.Plugins.AddRange(AppHostCommon.GetPlugins());
   }
 }
-```
+~~~
 
 You'll notice that except for the names of the these classes, and the
 specific base-classes, the code is exactly the same for each one. This
@@ -96,7 +96,7 @@ roles).
 
 And for the AppHostCommon class:
 
-```csharp
+~~~csharp
 public static class AppHostCommon
 {
   public static void Init(Container container, string connString)
@@ -122,7 +122,7 @@ public static class AppHostCommon
     yield return new ValidationFeature();
   }
 }
-```
+~~~
 
 Obviously you can configure it how you like, but the important part is
 that it's centralized out of each app host class.
@@ -130,7 +130,7 @@ that it's centralized out of each app host class.
 So what does that give us? Well, now we can do something like this
 (using NUnit to manage the integration tests):
 
-```csharp
+~~~csharp
 [SetUpFixture]
 public class GlobalTestSetup
 {
@@ -162,7 +162,7 @@ public class GlobalTestSetup
     }
   }
 }
-```
+~~~
 
 In NUnit, the `[SetUpFixture]` attribute marks a class as a "global"
 test initializer (of sorts, read the NUnit docs for more information).
@@ -176,7 +176,7 @@ So now, for each integration test, just make sure your service client
 uses the same base url that the SelfAppHost instance was started
 with:
 
-```csharp
+~~~csharp
 [TestCase]
 public void ShouldDoSomethingNeat()
 {
@@ -185,7 +185,7 @@ public void ShouldDoSomethingNeat()
   // Assert various things about the response, or check the DB to
   // ensure the DTO got inserted.
 }
-```
+~~~
 
 The setup might be a little tedious, but it pays off in keeping
 everything nice and self-contained in your tests project. Plus, since

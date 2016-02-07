@@ -82,17 +82,17 @@ isn't one. It's fairly easily fixed.
 2. You'll see a couple messages related to `systemd`. We don't need it, so go
    ahead and nuke it:
 
-   ```bash
+   ~~~bash
    $ sudo apt-get -y remove systemd
-   ```
+   ~~~
 
 3. Ok, now let's fix that blank startup screen. The setting we need is in the
    file `/etc/grub.d/10_linux`. Let's edit that file (I use vi, but use
    whatever editor you are most comfortable with)
 
-   ```bash
+   ~~~bash
    $ sudo vi /etc/grub.d/10_linux
-   ```
+   ~~~
 
 4. We need to comment out the line `vt_handoff="1"`. Do this by adding a `#` to
    the beginning of that line
@@ -103,18 +103,18 @@ isn't one. It's fairly easily fixed.
 
 Now we can install our prerequisite software for programming the keyboard:
 
-```bash
+~~~bash
 $ sudo apt-get install -y git cmake ctags python3 libusb-1.0-0 \
     libusb-1.0-0-dev make gcc-arm-none-eabi binutils-arm-none-eabi \
     dfu-util
-```
+~~~
 
 and clone the github repository for the controller:
 
-```bash
+~~~bash
 $ git clone https://github.com/kiibohd/controller.git
 $ cd controller
-```
+~~~
 
 
 6. Compile default layout
@@ -122,21 +122,21 @@ $ cd controller
 
 Let's check to make sure we can build the default Infinity layout:
 
-```bash
+~~~bash
 $ mkdir build_infinity
 $ cd build_infinity
 $ cmake ..
 $ make
-```
+~~~
 
 If all goes well, you should see a bunch of green lines scroll by, ending with
 something like this:
 
-```
+~~~
          SRAM:  32%    5384/16384      bytes
         Flash:  18%    23808/126976    bytes
 [100%] Built target SizeAfter
-```
+~~~
 
 Hooray! Your firmware has been built.
 
@@ -167,17 +167,17 @@ device to the VM manually.
 
 Back in the VM, enter the following (this is where you need another keyboard):
 
-```bash
+~~~bash
 $ sudo ./load
-```
+~~~
 
 Once you enter your password, the layout you built will be flashed on to your
 keyboard. You should see a bunch of output about communication with the DFU
 device. If you see the following line:
 
-```
+~~~
 state(7) = dfuMANIFEST, status(0) = No error condition is present
-```
+~~~
 
 you're done! You have successfully built and flashed a new layout onto your
 Infinity keyboard.

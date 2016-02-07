@@ -106,13 +106,13 @@ So what do they look like in practice?
 In it's simplest form, it's a JavaScript object with a single
 `render` method, that is passed to React's `createClass` method:
 
-``` javascript
+~~~ javascript
 var HelloWorld = React.createClass({
   render: function () {
     ... // return the UI here
   }
 });
-```
+~~~
 
 <p class="notice">
 Many examples of React components use ES2015 classes. For now, I'm going to
@@ -133,18 +133,17 @@ using React in the browser, those are the two you care about).
 In fact, let's go ahead and use `createElement` to make our `HelloWorld`
 component actually render something:
 
-``` javascript
+~~~ javascript
 var HelloWorld = React.createClass({
   render: function () {
     return React.createElement('div', null, 'Hello, World!');
   }
 });
-
-```
+~~~
 
 Let's break that down:
 
-``` javascript
+~~~ javascript
 React.createElement(
   'div', // the element or component to create
   null,  // the "props" to assign to the component
@@ -154,7 +153,7 @@ React.createElement(
                  // passed as additional
                  // arguments
 );
-```
+~~~
 
 Let's dive a bit more into `props` (the second parameter). "Props" is a concept
 that is fairly core to the React experience. They are the "properties" of a
@@ -181,7 +180,7 @@ web page.
 
 In action:
 
-``` html
+~~~ html
 <!doctype html>
 <head>
   <script src="https://fb.me/react-0.14.7.js"></script>
@@ -204,7 +203,7 @@ In action:
     );
   </script>
 </body>
-```
+~~~
 
 [Here's][2] a functioning JSBin of the the above.
 

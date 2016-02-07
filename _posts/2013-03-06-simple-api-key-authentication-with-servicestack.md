@@ -14,14 +14,14 @@ Sometimes you want to lock down your API to only allow certain clients
 access. I'd like to share a simple way of doing just that, based on
 HTTP headers and a simple pre-shared key.
 
-<!-- More -->
+<!-- more -->
 
 Let's just dive right in, shall we?
 
 First thing's first, let's add a RequestFilter to perform the
 validation by extracting the key from a custom HTTP header:
 
-```csharp
+~~~csharp
 // AppHost.cs
 public class AppHost : AppHostBase
 {
@@ -36,13 +36,13 @@ public class AppHost : AppHostBase
     });
   }
 }
-```
+~~~
 
 This static class we use to verify the key is valid, by checking
 against a custom `ConfigurationSection` (defined shortly):
 
 
-```csharp
+~~~csharp
 // Clients.cs
 public static class Clients
 {
@@ -55,12 +55,12 @@ public static class Clients
            .Any(ce => ce.ApiKey == apiKey);
   }
 }
-```
+~~~
 
 And the custom `ConfigurationSection` is as follows:
 
 
-```csharp
+~~~csharp
 // ClientSection.cs
 using System.Configuration;
 
@@ -117,7 +117,7 @@ public class ClientSection : ConfigurationSection
     }
   }
 }
-```
+~~~
 
 As you can see, by far the largest class is the custom configuration
 section class. A necessary evil of .NET's configuration system.
@@ -125,7 +125,7 @@ section class. A necessary evil of .NET's configuration system.
 What this setup allows is to have the following in your web.config (or
 App.config if self-hosted):
 
-``` xml
+~~~ xml
 <!-- [Web|App].config -->
 <?xml version="1.0"?>
 <configuration>
@@ -141,7 +141,7 @@ App.config if self-hosted):
     </clients>
   </apiClients>
 </configuration>
-```
+~~~
 
 _Note_: The `<configsection>` element needs a fully qualified type name,
 so if you need to put it in a namespace, make sure to include it in
@@ -151,16 +151,16 @@ Nice and easy client access management. All the client has to do is
 send the appropriate HTTP header. For example:
 
 
-```http
+~~~http
 GET /json/reply/SomeRequest HTTP/1.1
 Host: api.example.com
 X-ApiKey: somelongrandomkey
-```
+~~~
 
 If you're using the C# client, then it's `LocalHttpWebRequestFilter`
 to the rescue:
 
-```csharp
+~~~csharp
 // AuthenticatedJsonServiceClient.cs
 public class AuthenticatedJsonServiceClient : JsonServiceClient
 {
@@ -173,7 +173,7 @@ public class AuthenticatedJsonServiceClient : JsonServiceClient
   }
 }
 
-```
+~~~
 
 And that's about it! Now, I realize that this might not be the most
 robust or 'enterprise-y' solution, but it's simple, straightforward,
@@ -183,7 +183,7 @@ You can also extend the `ClientElement` class if you need more
 per-client data. For instance, I'm currently selecting a connection
 string based on the ApiKey being sent over from the client:
 
-```csharp
+~~~csharp
 // Added to the ClientElement class
 [ConfigurationProperty("connectionStringName", IsRequired = true)]
 public string ConnectionStringName
@@ -191,16 +191,16 @@ public string ConnectionStringName
   get { return (string)base["connectionStringName"]; }
   set { base["connectionStringName"] = value; }
 }
-```
+~~~
 
 And in web.config:
 
-``` xml
+~~~ xml
 <!-- web.config -->
 ...
 <client name="Client1" connectionStringName="Client1DB" apiKey="somelongrandomkey" />
 ...
-```
+~~~
 
 Actually retrieving the value of that property per-request I'll leave
 as an exercise for the reader ;)

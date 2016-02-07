@@ -26,7 +26,7 @@ DataAnnotations attributes. The standard way of decoupling your
 DataAnnotations and models is the MetadataTypeAttribute. You use it
 like so:
 
-```csharp
+~~~csharp
 using System;
 using System.ComponentModel.DataAnnotations;
 [MetadataType(typeof(AddressMeta))]
@@ -47,7 +47,7 @@ public class Address
     /* etc. etc. */
   }
 }
-```
+~~~
 
 This approach works fine for most cases. However, in some cases, you
 need to specify validation rules separately from your models. Some may
@@ -63,7 +63,7 @@ pretty easy.
 
 What I want to do is something like this:
 
-```csharp
+~~~csharp
 using System;
 using System.ComponentModel.DataAnnotations;
 public class Address
@@ -85,7 +85,7 @@ public class AddressMeta
   public string Address1;
   /* etc. etc. */
 }
-```
+~~~
 
 
 MVC allows for an amazing amount of customization. It uses a Provider
@@ -97,7 +97,7 @@ First, we’re going to need a custom attribute for marking the Metadata
 classes, and then we’ll need a provider for both Metadata, and for
 Validators. The code is as follows:
 
-```csharp
+~~~csharp
 [AttributeUsage(AttributeTargets.Class)]
 public class MetadataForAttribute : Attribute
 {
@@ -183,7 +183,7 @@ public class MetadataForValidatorProvider :
         return base.GetTypeDescriptor(type);
     }
 }
-```
+~~~
 
 
 There might be a better way of doing this, but this way is
@@ -192,19 +192,19 @@ application startup. Registering these providers is relatively simple.
 Just add the following to your Global.asax.cs (or, god forbid
 Global.asax.vb \*YUCK\*), in the Application_Starup method:
 
-```csharp
+~~~csharp
 var metadataForProvider = new MetadataForMetadataProvider();
 ModelMetadataProviders.Current = metadataForProvider;
 providers.Clear();
 providers.Add(new MetadataForValidatorProvider(metadataForProvider.MetadataTypeMap));
-```
+~~~
 
 And voila. Note, that this will also work with model hierarchies. Say
 you want to extend a model into something like an AddressViewModel
 with additional properties, perhaps for custom formatting, etc.. The
 following will do the trick just nicely:
 
-```csharp
+~~~csharp
 public class Contact
 {
   public int Id { get; set; }
@@ -243,5 +243,5 @@ public class ContactViewModelMeta : ContactMeta
   [Description("Full Name")]
     public string FullName;
 }
-```
+~~~
 

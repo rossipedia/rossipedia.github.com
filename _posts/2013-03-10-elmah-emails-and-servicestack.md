@@ -35,7 +35,7 @@ chance to bubble up to that module. Hence, no emails.
 
 So, how do we get around this? It's quite simple, actually:
 
-```csharp
+~~~csharp
 // Global.asax.cs
 using System;
 using System.Reflection;
@@ -80,7 +80,7 @@ public class Application : HttpApplication
         return DtoUtils.HandleException(this.appHost, request, ex);
     }
 }
-```
+~~~
 
 If Elmah had made that `OnError` method public, then this would be
 quite trivial actually, but since it's internal, we have to use some

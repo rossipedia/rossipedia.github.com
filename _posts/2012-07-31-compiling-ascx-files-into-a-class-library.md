@@ -35,7 +35,7 @@ System.Web.
 Add your control. For this example I’m just going to use the following super
 basic control (named MyControl.ascx):
 
-```html
+~~~html
 <%@ Control Language="C#" ClassName="ControlTest.MyControl"
 CodeFile="MyControl.ascx.cs" Inherits="ControlTest.MyControlCode"
 AutoEventWireup="true" %>
@@ -55,7 +55,7 @@ AutoEventWireup="true" %>
    </asp:View>
 </Views>
 </asp:MultiView>
-```
+~~~
 
 Note: You’ll have to add this by selecting “Text File” as Class Library
 projects don’t give you the web control templates.
@@ -71,7 +71,7 @@ silly things like **<asp:mycontrol_ascx />**. And that’s just silly.
 
 Here’s the contents of my **MyControl.ascx.cs** file:
 
-```csharp
+~~~csharp
 namespace ControlTest
 {
     using System;
@@ -100,7 +100,7 @@ namespace ControlTest
         }
     }
 }
-```
+~~~
 
 
 Pretty basic stuff. Now here’s where the magic happens. Be warned: this gets a
@@ -111,7 +111,7 @@ to open up the actual project file in the XML editor.
 Down at the bottom, right before the end **</Project>**, add the following
 targets:
 
-``` xml
+~~~ xml
 <Target Name="BuildReferences">
         <MSBuild Projects="@(ProjectReference)" Targets="Build"
         BuildInParallel="True">
@@ -147,17 +147,17 @@ Outputs="$(OutputPath)\$(AssemblyName).dll">
         <RemoveDir Directories="$(TempDirectory)" />
         <RemoveDir Directories="$(OutputPath)" />
 </Target>
-```
+~~~
 
 
 Now, change the **DefaultTargets** attribute of the **<Project> element at the
 top of the file to have the value “CompileUserControls”. You want it to look
 like this:**
 
-``` xml
+~~~ xml
 <Project ToolsVersion="4.0" DefaultTargets="Build"
 xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-```
+~~~
 
 
 Now save and close that file, right click the project in Solution Explorer,
@@ -188,7 +188,7 @@ reference to the ControlTest (or whatever yours is called) project.
 
 This is the default.aspx file:
 
-``` html
+~~~ html
 <%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs"
 Inherits="ControlTestWeb._default" %>
 <%@ Register tagPrefix="controls" namespace="ControlTest"
@@ -211,7 +211,7 @@ assembly="ControlTest" %>
         </form>
     </body>
 </html>
-```
+~~~
 
 [1]: http://odetocode.com/blogs/scott/archive/2005/10/06/using-msbuild-and-ilmerge-to-package-user-controls-for-reuse.aspx
 [2]: http://www.microsoft.com/en-us/download/details.aspx?id=17630

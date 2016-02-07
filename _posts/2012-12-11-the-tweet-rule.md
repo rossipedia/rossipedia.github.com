@@ -12,7 +12,7 @@ tags:
 ---
 I ran across this lovely little interface method today:
 
-```csharp
+~~~csharp
 public interface IOrderProcessor
 {
   TransactionResponse CreateOrder(
@@ -24,7 +24,7 @@ public interface IOrderProcessor
       string notes,
       int orderId);
 }
-```
+~~~
 
 <!-- more -->
 
