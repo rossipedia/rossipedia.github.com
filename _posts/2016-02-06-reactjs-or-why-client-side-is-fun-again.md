@@ -5,7 +5,7 @@ modified:
 categories: 
   - javascript
   - webdev
-description: My thoughts on the UI library ReactJS
+description: A (hopefully) comprehensive walkthrough into ReactJS
 tags: [javascript, reactjs]
 image:
   feature: react-header.png
