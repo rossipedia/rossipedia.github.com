@@ -45,7 +45,7 @@ gems:
   - jekyll-paginate
 sass:
   sass_dir: _sass
-  style: compressed
+  # style: compressed
 
 # https://github.com/mojombo/jekyll/wiki/Permalinks
 permalink:   /blog/:year/:month/:title/

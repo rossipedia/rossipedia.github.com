@@ -78,11 +78,10 @@ the next post or the one after that.
 
 So, let's get to it then!
 
-<p class="notice">
 I'm going to make a few assumptions about the reader here, namely that you are
 familiar with HTML, JavaScript, jQuery, and the DOM. If not, then this series
 of posts is probably going to be quite confusing.
-</p>
+{: .notice }
 
 ## React Basics: Components
 
@@ -114,11 +113,10 @@ var HelloWorld = React.createClass({
 });
 ~~~
 
-<p class="notice">
 Many examples of React components use ES2015 classes. For now, I'm going to
 focus on the ES5 usage of React, though I will introduce ES2015 in a later
 post.
-</p>
+{: .notice}
 
 The two required pieces here are `React.createClass`, and the `render()` method.
 
@@ -170,13 +168,12 @@ form, React uses camelCased identifiers (eg: `onClick` instead of `onclick`,
 Okay, so now that we have declared a component, how to show it on a page? That's
 where `ReactDOM.render(reactElement, domElement)` comes in:
 
-<p class="notice">
 React is actually split into multiple libraries, as the core of React
 (components, elements, etc...) is conceptually independent of where it's used.
 When working on the web, you will need to not only include React, but the
 ReactDOM library as well, which is how we get a component into the DOM of a
 web page.
-</p>
+{: .notice}
 
 In action:
 

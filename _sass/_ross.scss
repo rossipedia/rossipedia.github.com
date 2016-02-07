@@ -1,0 +1,16 @@
+h1,h2,h3,h4,h5,h6 {
+  &[id] {
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+      position: relative;
+
+      &:before {
+        content: "#";
+        position: absolute;
+
+        left: -.7em;
+      }
+    }
+  }
+}
