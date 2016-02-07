@@ -54,13 +54,13 @@ permalink:   /blog/:year/:month/:title/
 paginate: 5
 
 
-# kramdown:
-  # input: GFM
-  # auto_ids: true
-  # # footnote_nr: 1
-  # entity_output: as_input
-  # toc_levels: 1..6
-  # # use_coderay: true
+kramdown:
+  input: GFM
+  auto_ids: true
+  # footnote_nr: 1
+  entity_output: as_input
+  toc_levels: 1..6
+  # use_coderay: true
 
   # # coderay:
     # # coderay_line_numbers: nil
