@@ -194,7 +194,7 @@ In action:
     });
 
     // Render the component into an element
-    React.render(
+    ReactDOM.render(
       React.createElement(HelloWorld),
       document.getElementById('hello');
     );
