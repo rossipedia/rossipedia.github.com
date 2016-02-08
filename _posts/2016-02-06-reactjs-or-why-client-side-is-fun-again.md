@@ -88,7 +88,7 @@ of posts is probably going to be quite confusing.
 In React, UIs are driven by _Components_. So, in React speak, what is a
 component? 
 
-> A Component is a self-contained unit of software that encapsulates both how
+> A Component is a self-contained unit of software that encapsulates both 
 > the structure of the UI and its behavior, optionally maintaining any internal
 > state necessary for the operation of the UI.
 
