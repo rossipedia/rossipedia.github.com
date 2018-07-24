@@ -7,10 +7,10 @@ categories:
 - keyboards
 ---
 
-The [ErgoDox](http://ergodox.org) is a custom split-hand ergonomic
-mechanical keyboard project started by [GeekHack](http://geekhack.org)
+The [ErgoDox](https://ergodox.org) is a custom split-hand ergonomic
+mechanical keyboard project started by [GeekHack](https://geekhack.org)
 forum member Dox, and contributed to and refined by many others. It
-was offered as a kit on [MassDrop](http://www.massdrop.com) starting
+was offered as a kit on [MassDrop](https://www.massdrop.com) starting
 in early 2013. After demand for a second run increased, MassDrop
 offered a second group buy, which I jumped on and placed my order. As
 of this writing, MassDrop is running a [third group buy](https://www.massdrop.com/buy/ergodox) for the ErgoDox.
@@ -35,14 +35,14 @@ Build
 
 I purchased a FX888D soldering iron from Amazon for the build, and I
 already had a roll of solder, which worked find for the build. I
-followed along with WhiteFireDragons's [excellent video](http://www.youtube.com/watch?v=x1irVrAl3Ts),
+followed along with WhiteFireDragons's [excellent video](https://www.youtube.com/watch?v=x1irVrAl3Ts),
 and had no problems. I'm pretty sure I lucked way out as I had
 everything work perfectly the first time.
 
 Supplies
 --------
 
-* [Hakko FX888D Digital Soldering Iron](http://www.amazon.com/gp/product/B00AWUFVY8/ref=oh_details_o00_s00_i00?ie=UTF8&psc=1)
+* [Hakko FX888D Digital Soldering Iron](https://www.amazon.com/gp/product/B00AWUFVY8/ref=oh_details_o00_s00_i00?ie=UTF8&psc=1)
   (I used the stock tip it comes with)
 * A roll of 60/40 0.032" Rosin Core solder from Radio Shack
 * Wire tip cleaner (the one that comes with the FX88D is fine)
@@ -85,7 +85,7 @@ and needlenose pliers to extract the internals from the plastic
 casing. Not fun.
 
 __Resistors__: Neither WFD's video, nor the
-[instructions](http://www.massdrop.com/ext/ergodox/assembly/) on
+[instructions](https://www.massdrop.com/ext/ergodox/assembly/) on
 Massdrop explicitly clarify which resistors go where. As I am not an
 electrical engineer I had to go figure out which resistors were the
 2.2kΩ resistors (the one _without_ the dark brown stripe), and which
@@ -127,7 +127,7 @@ Use
 
 I've been using the ErgoDox for a little over a week now, and for
 normal typing (such as this post), I'm back up to 100% speed. However,
-my [dayjob](http://careers.stackexchange.com) requires writing a lot
+my [dayjob](https://careers.stackexchange.com) requires writing a lot
 of code, and I'd say that due to the special symbols that have to be
 used fairly consistently I'm only back up to about 85% of normal
 speed.
@@ -147,7 +147,7 @@ huge). my hands are more relaxed, and my shoulders are less tense.
 
 All in all, a great purchase and I'm extremely happy with this board.
 At $200 for the bare board (add $37 for the
-[DSA](http://keycapsdirect.com/key-caps.php) keycaps, and from $37-$50
+[DSA](https://keycapsdirect.com/key-caps.php) keycaps, and from $37-$50
 for the DCS keycaps) it's not for everyone. But if you're into high
 quality mechanical keyboards and like tinkering with electronics, then
 I'd highly recommend it. The current group buy for the ErgoDox on

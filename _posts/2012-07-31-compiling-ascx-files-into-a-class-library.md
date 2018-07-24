@@ -213,5 +213,5 @@ assembly="ControlTest" %>
 </html>
 ~~~
 
-[1]: http://odetocode.com/blogs/scott/archive/2005/10/06/using-msbuild-and-ilmerge-to-package-user-controls-for-reuse.aspx
-[2]: http://www.microsoft.com/en-us/download/details.aspx?id=17630
+[1]: https://odetocode.com/blogs/scott/archive/2005/10/06/using-msbuild-and-ilmerge-to-package-user-controls-for-reuse.aspx
+[2]: https://www.microsoft.com/en-us/download/details.aspx?id=17630

@@ -192,7 +192,7 @@ everything nice and self-contained in your tests project. Plus, since
 the services are now being hosted in-process, you can step-through
 from client to server without breaking a sweat.
 
-[1]: http://servicestack.net
-[2]: http://www.nunit.org
-[3]: http://www.jetbrains.com/resharper/
+[1]: https://servicestack.net
+[2]: https://www.nunit.org
+[3]: https://www.jetbrains.com/resharper/
 [4]: https://plus.google.com/117201192611184809497/posts/euVcrpLb5nW

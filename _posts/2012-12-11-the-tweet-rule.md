@@ -47,5 +47,5 @@ I'm going to strive to keep all my methods obeying this rule, as well
 as under 10 statements in length (roughly). It will be interesting to
 see how these limitations affect the way I solve problems in code.
 
-[1]: http://en.wikipedia.org/wiki/Single_responsibility_principle
+[1]: https://en.wikipedia.org/wiki/Single_responsibility_principle
 

@@ -50,7 +50,7 @@ installation of ReSharper and Visual Studio:
 You can download the DLL [here][3], or checkout the source on
 [GitHub][4]
 
-[1]: http://hadihariri.com/2010/01/12/writing-plug-ins-for-resharper-part-1-of-undefined/
-[2]: http://www.jetbrains.com/resharper/
+[1]: https://hadihariri.com/2010/01/12/writing-plug-ins-for-resharper-part-1-of-undefined/
+[2]: https://www.jetbrains.com/resharper/
 [3]: https://github.com/downloads/rossipedia/Resharper.VirtualQuickFix/Resharper.VirtualQuickFix-1.0.1.zip
 [4]: https://github.com/rossipedia/Resharper.VirtualQuickFix

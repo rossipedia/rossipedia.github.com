@@ -20,7 +20,7 @@ ServiceStack offers a `ElmahLogFactory` for handling errors and the
 like, and that works fine. But that only writes to the configured log.
 Emails are nowhere to be found. At least not in my project.
 
-[1]: http://servicestack.net
+[1]: https://servicestack.net
 [2]: https://code.google.com/p/elmah/
 
 <!-- more -->

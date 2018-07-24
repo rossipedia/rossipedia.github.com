@@ -10,7 +10,7 @@ tags:
 ---
 
 I've been working a lot in Ubuntu lately, and my terminal of choice over there
-is the [xfce4-terminal](http://docs.xfce.org/apps/terminal/start), specifically
+is the [xfce4-terminal](https://docs.xfce.org/apps/terminal/start), specifically
 for it's "Dark Pastels" theme.
 
 <!-- more -->

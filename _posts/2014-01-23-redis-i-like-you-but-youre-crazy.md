@@ -9,9 +9,9 @@ tags:
 - redis
 ---
 
-Dear [Redis](http://redis.io),
+Dear [Redis](https://redis.io),
 
-![I like you, but you're crazy](http://i.imgur.com/fUGHSu1.jpg)
+![I like you, but you're crazy](https://i.imgur.com/fUGHSu1.jpg)
 
 <!-- more -->
 
@@ -81,8 +81,8 @@ connections, which led to the odd results.
 Moral of the story? Understand the configuration and behavior of the
 services you depend on, and _don't_ make assumptions.
 
-[1]: http://msdn.microsoft.com/en-us/library/windows/desktop/ms686714(v=vs.85).aspx
-[2]: http://stackoverflow.com/questions/21059099/
+[1]: https://msdn.microsoft.com/en-us/library/windows/desktop/ms686714(v=vs.85).aspx
+[2]: https://stackoverflow.com/questions/21059099/
 [3]: https://code.google.com/p/booksleeve/
 [4]: https://code.google.com/p/booksleeve/
-[5]: http://www.linqpad.net
+[5]: https://www.linqpad.net

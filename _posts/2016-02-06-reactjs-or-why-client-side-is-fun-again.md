@@ -214,7 +214,7 @@ That's it for the basics! Next post we'll go into passing props into our
 component and start getting our components to do something actually interesting!
 
 
-[1]: http://facebook.github.io/react/
-[2]: http://jsbin.com/noyote/edit?html,output
+[1]: https://facebook.github.io/react/
+[2]: https://jsbin.com/noyote/edit?html,output
 
 <!-- vim: set tw=80 wm=80 : -->

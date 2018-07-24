@@ -5,7 +5,7 @@ reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url:              http://rossipedia.com
+url:              https://rossipedia.com
 # url:                http://localhost:4000
 
 encoding: utf-8
@@ -17,10 +17,10 @@ owner:
   bio:            ""
   email:          bryan@rossipedia.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        http://twitter.com/rossipedia
-  facebook:       http://facebook.com/rossipedia
-  github:         http://github.com/rossipedia
-  stackexchange:  http://stackoverflow.com/users/115049/rossipedia
+  twitter:        https://twitter.com/rossipedia
+  facebook:       https://facebook.com/rossipedia
+  github:         https://github.com/rossipedia
+  stackexchange:  https://stackoverflow.com/users/115049/rossipedia
   # linkedin:
   # instagram:
   # flickr:

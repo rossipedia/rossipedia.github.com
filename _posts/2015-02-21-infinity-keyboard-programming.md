@@ -14,7 +14,7 @@ somebody else in the process. I will provide a more in-depth review in a later
 post.
 
 
-![Infinity Keyboard assembled](http://i.imgur.com/TmojAvT.jpg?1 "The Infinity Keyboard")
+![Infinity Keyboard assembled](https://i.imgur.com/TmojAvT.jpg?1 "The Infinity Keyboard")
 
 <!-- more -->
 
@@ -41,14 +41,14 @@ Okay, first off go ahead and install VirtualBox. Once that's up and running,
 you'll want to create a new Virtual Machine. Call it whatever you want (I called
 mine "Keyboard Dev"). Here are the specs I chose:
 
-![Keyboard Dev VM](http://i.imgur.com/MzKzhJN.png)
+![Keyboard Dev VM](https://i.imgur.com/MzKzhJN.png)
 
 Attach the downloaded `mini.iso` file to the VM. This can be done by right
 clicking the VM and choosing "Settings", then going to the "Storage" section and
 using the dropdown on the right to select the .iso file to attach to the VM's
 drive:
 
-![Keyboard Dev VM Storage Settings](http://i.imgur.com/1w8u4iu.png)
+![Keyboard Dev VM Storage Settings](https://i.imgur.com/1w8u4iu.png)
 
 
 Now start up the VM!
@@ -157,7 +157,7 @@ the computer sees the Infinity as when it's in re-flash mode).
 Go to the Settings for the VM (the VM can be running for this), and the "USB"
 section on the left. Then use the button on the right to add the USB filter:
 
-![USB Filter Selection](http://i.imgur.com/mpBbQXl.png)
+![USB Filter Selection](https://i.imgur.com/mpBbQXl.png)
 
 Now whenever the VM is running and you press the re-flash button on your
 keyboard, the bootloader will connect directly to the VM and bypass the host
