@@ -17,9 +17,9 @@ owner:
   bio:            ""
   email:          bryan@rossipedia.com
   # Social networking links used in footer. Update and remove as you like.
-  twitter:        https://twitter.com/rossipedia
-  facebook:       https://facebook.com/rossipedia
-  github:         https://github.com/rossipedia
+  twitter:        rossipedia
+  facebook:       rossipedia
+  github:         rossipedia
   stackexchange:  https://stackoverflow.com/users/115049/rossipedia
   # linkedin:
   # instagram:
